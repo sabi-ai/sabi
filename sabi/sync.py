@@ -1,4 +1,4 @@
-from api_client import ApiClient
+from sabi.api_client import ApiClient
 
 class Sync(ApiClient):
     headers = None

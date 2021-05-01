@@ -16,7 +16,6 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'Topic :: Software Development :: BI Tools',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
@@ -27,7 +26,7 @@ setup(
     ],
 
     keywords='Scientific, Advanced, Business, Intelligence',
-    package_dir={'': 'sabi/src'},
+    package_dir={'': './'},
     packages=find_packages(),  # Required
     python_requires='>=3.6, <4',
     install_requires=['requests']
