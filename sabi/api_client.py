@@ -6,10 +6,12 @@ class ApiClient:
     headers = None
     api_host = None
     api_base = None
-    logger = None
 
-    def __init__(self, logger, host, base):
-        self.logger = logger
+    def __init__(self, api_key, base, host):
+        if host is None:
+            host = 'https://api.sabi.ai'
+            
+        self.headers = {'content-type': 'application/json','Authorization': f'Bearer {api_key}'}
         self.api_host = host
         self.api_base = base
 
@@ -20,10 +22,8 @@ class ApiClient:
         url = path.join(self.api_host, *[str(s).strip("/") for s in endpoints])
         response = requests.request(method, url, **kwargs)
         if (response.status_code > 299):
-            self.logger.error(
-                f"Status code: {response.status_code}, Content: {response.text}"
-            )
-            response.raise_for_status()
+            raise f"Status code: {response.status_code}, Content: {response.text}"
+            
         if response.status_code == 204:
             return {}
         return json.loads(response.text)
