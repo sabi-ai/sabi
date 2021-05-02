@@ -81,7 +81,7 @@ class Sync(ApiClient):
 
         [
             {
-                "id": "tt43d-344frf-w34d",
+                "ticket_id": "tt43d-344frf-w34d",
                 "integration_id": 2,
                 "name": "Story name",
                 "description": "Story description",
