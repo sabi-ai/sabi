@@ -147,3 +147,7 @@ class Sync(ApiClient):
         """
         response = self.get('status','missing')
         return response
+
+    def get_ticket(self, ticket_id):
+        response = self.get('tickets',ticket_id)
+        return response
