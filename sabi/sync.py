@@ -15,7 +15,6 @@ class Sync(ApiClient):
         [
             {
                 "id": "1",
-                "integration_id": "clubhouse",
                 "name": "joe"
             }
         ]
@@ -30,7 +29,6 @@ class Sync(ApiClient):
         [
             {
                 "id": "ddwe3-23sx-aas42",
-                "integration_id": "44fd-4rwas-3344",
                 "name": "Backlog",
                 "flow": "In Development",
                 "position": 4,
@@ -82,7 +80,6 @@ class Sync(ApiClient):
         [
             {
                 "ticket_id": "tt43d-344frf-w34d",
-                "integration_id": 2,
                 "name": "Story name",
                 "description": "Story description",
                 "type": "Bug",
@@ -103,7 +100,6 @@ class Sync(ApiClient):
         [
             {
                 "ticket_id": "tt43d-344frf-w34d",
-                "integration_id": "2",
                 "deleted": false
             }
         ]
@@ -117,7 +113,6 @@ class Sync(ApiClient):
 
         [
             {
-                "integration_id": 1,
                 "object_type": "tickets",
                 "next_pull": "https://clubhouse.com/api/v1/tickets/next_object/foo",
                 "query": "2021-04-01..2021-04-31"

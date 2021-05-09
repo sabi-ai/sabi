@@ -22,7 +22,7 @@ class ApiClient:
         url = path.join(self.api_host, *[str(s).strip("/") for s in endpoints])
         response = requests.request(method, url, **kwargs)
         if (response.status_code > 299):
-            raise f"Status code: {response.status_code}, Content: {response.text}"
+            raise Exception (f"Status code: {response.status_code}, Content: {response.text}")
             
         if response.status_code == 204:
             return {}
