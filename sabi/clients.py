@@ -11,3 +11,7 @@ class Clients(ApiClient):
     def company_integration(self, company_integration_hash_id):
         response = self.get('company_integrations',company_integration_hash_id)
         return response
+
+    def integrations(self, type):
+        response = self.get('integrations',type)
+        return response
