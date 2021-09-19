@@ -39,6 +39,20 @@ class Sync(ApiClient):
         """
         response = self.put('status',json=states)
         return response
+
+    def save_labels(self, labels):
+        """
+        Example for valid payload:
+
+        [
+            {
+                "id": "foo",
+                "name": "foo"
+            }
+        ]
+        """
+        response = self.put('labels',json=labels)
+        return response
         
     def save_ticket_assignments(self, ticket_assignments):
         """
