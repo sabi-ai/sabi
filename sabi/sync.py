@@ -71,6 +71,23 @@ class Sync(ApiClient):
         response = self.put('tickets','assignment',json=ticket_assignments)
         return response
 
+    def save_ticket_labels(self, ticket_labels):
+        """
+        Example for valid payload:
+        
+        [
+            {
+                "ticket_id": "ddwe3-23sx-aas42",
+                "label_id": "44fd-4rwas-3344",
+                "add_or_remove": "added/removed",
+                "datetime": "2019-03-28 17:43:58.48+00"
+            }
+        ]
+
+        """
+        response = self.put('tickets','label',json=ticket_labels)
+        return response
+
     def save_ticket_status_changes(self, ticket_status_changes):
         """
         Example for valid payload:
