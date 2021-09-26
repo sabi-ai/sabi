@@ -6,7 +6,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='sabi',
-    version='0.0.10', 
+    version='0.0.11', 
     description='A client for the SABI api (www.sabi.ai)', 
     long_description=long_description,
     long_description_content_type='text/markdown',
