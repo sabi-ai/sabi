@@ -40,6 +40,23 @@ class Sync(ApiClient):
         response = self.put('status',json=states)
         return response
 
+    def save_projects(self, states):
+        """
+        Example for valid payload:
+
+        [
+            {
+                "project_id": "ddwe3-23sx-aas42",
+                "name": "Testing Me",
+                "short_name": "TM",
+                "description":"",
+                "json": {}
+            }
+        ]
+        """
+        response = self.put('projects',json=states)
+        return response
+
     def save_labels(self, labels):
         """
         Example for valid payload:
