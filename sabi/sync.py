@@ -212,6 +212,6 @@ class Sync(ApiClient):
         response = self.get('tickets',ticket_id)
         return response
 
-    def get_fields(self, ticket_id):
+    def get_fields(self):
         response = self.get('fields')
         return response
