@@ -15,3 +15,7 @@ class Clients(ApiClient):
     def integrations(self, type):
         response = self.get('integrations',type)
         return response
+
+    def mark_integration_unhealthy(self, company_integration_id):
+        response = self.put('mark_integration_unhealthy',company_integration_id)
+        return response
